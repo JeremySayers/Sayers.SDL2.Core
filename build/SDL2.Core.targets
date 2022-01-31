@@ -1,0 +1,9 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<NativeSDL2CoreLibs Include="$(MSBuildThisFileDirectory)**\*.dll" Condition="$([MSBuild]::IsOSPlatform('Windows'))" Visible="false"/>
+		<None Include="@(NativeSDL2CoreLibs)" Visible="false">
+			<Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+</Project>

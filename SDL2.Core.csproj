@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<Version>1.0.7</Version>
+		<Company>Jeremy Sayers</Company>
+		<Description>Contains the SDL2-CS bindings along with the native SDL dlls.</Description>
+		<Copyright></Copyright>
+		<PackageProjectUrl>https://github.com/JeremySayers/SDL2.Core</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/JeremySayers/SDL2.Core</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>SDL;SDL2;SDL2-CS;SDL-image;SDL-ttf;SDL-mixer;</PackageTags>
+		<PackageLicenseExpression>Zlib</PackageLicenseExpression>
+		<Authors>JeremySayers</Authors>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="build\**">
+			<Pack>true</Pack>
+			<PackagePath>build\</PackagePath>
+			<IncludeInPackage>false</IncludeInPackage>
+		</None>
+	</ItemGroup>
+</Project>
