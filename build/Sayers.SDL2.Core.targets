@@ -1,0 +1,9 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<NativeSayersSDL2CoreLibs Include="$(MSBuildThisFileDirectory)**\*.dll" Condition="$([MSBuild]::IsOSPlatform('Windows'))" Visible="false"/>
+		<None Include="@(NativeSayersSDL2CoreLibs)" Visible="false">
+			<Link>%(FileName)%(Extension)</Link>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+</Project>
